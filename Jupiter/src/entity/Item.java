@@ -11,6 +11,20 @@ public class Item {
 	private String name;
 	private double rating;
 	private String address;
+	
+	private Set<String> categories; 
+	private String imageUrl; 
+	private String url;
+	private double distance;
+	
+	private String city;
+	private String state;
+	private String country;
+	private String zipcode;
+	private double latitude;
+	private double longitude;
+	private String description;
+	
 	public void main() {
 		ItemBuilder a = new ItemBuilder();
 	}
@@ -24,6 +38,17 @@ public class Item {
 		private String imageUrl; 
 		private String url; 
 		private double distance;
+		
+		private String city;
+		private String state;
+		private String country;
+		private String zipcode;
+		private double latitude;
+		private double longitude;
+		private String description;
+		
+		
+		
 		public ItemBuilder setItemId(String itemId) { 
 			this.itemId = itemId;
 			return this; 
@@ -58,6 +83,34 @@ public class Item {
 		}
 		public Item build() {
 			return new Item(this);
+		}
+		public void setCity(String c) {
+			this.city = c;
+			
+		}
+		public void setState(String s) {
+			this.state = s;
+			
+		}
+		public void setCountry(String c) {
+			this.city = c;
+			
+		}
+		public void setZipcode(String z) {
+			this.zipcode = z;
+			
+		}
+		public void setLatitude(Double la) {
+			this.latitude = la;
+			
+		}
+		public void setLongitude(Double lo) {
+			this.longitude = lo;
+			
+		}
+		public void setDescription(String des) {
+			this.description = des;
+			
 		}
 	}
 	
@@ -94,12 +147,6 @@ public class Item {
 		}
 		return obj;
 	}
-	
-	
-	
-	
-	
-	
 	public String getItemId() {
 		return itemId;
 	}
@@ -124,6 +171,19 @@ public class Item {
 	public double getDistance() {
 		return distance;
 	}
-	private Set<String> categories; private String imageUrl; private String url;
-	private double distance;
+	public Object getCity() {
+		return city;
+	}
+	public Object getState() {
+		return state;
+	}
+	public Object getLatitude() {
+		return latitude;
+	}
+	public Object getLongitude() {
+		return longitude;
+	}
+	public Object getDescription() {
+		return description;
+	}
 }
